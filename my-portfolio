@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Achievements</title>
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7d, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Profile image style */
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: filter 0.3s ease;
+        }
+        /* Profile image style */
+.profile-img {
+    width: 150px; /* Adjust width to be less */
+    height: 150px; /* Adjust height to be more */
+    border-radius: 50%; /* Makes the image round */
+    border: 3px solid #fff; /* Border color and size */
+    transition: filter 0.3s ease;
+    object-fit: cover; /* Ensures the image covers the whole area */
+}
+
+        .profile-img:hover {
+            filter: grayscale(100%);
+        }
+
+        /* Invert effect for achievements */
+        .achievement-card:hover {
+            filter: invert(100%);
+            transition: filter 0.3s ease;
+        }
+
+        /* Custom CSS for the heading */
+        @font-face {
+            font-family: "WHOA Spine Minimum";
+            src: url("https://assets.codepen.io/174183/WHOA-Variable-Spine-v0.3.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "WHOA Top Minimum";
+            src: url("https://assets.codepen.io/174183/WHOA-Variable-Top-v0.3.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+
+        h1 span {
+            display: block;
+            cursor: url("https://assets.codepen.io/174183/spiral_1.png"), auto;
+            font-family: "WHOA Top Minimum";
+            font-variation-settings: "hrzn" 0, "vert" 0, "rota" 0, "zoom" 0;
+            font-weight: normal;
+            font-size: clamp(3rem, 32.1vw - 10.1rem, 6rem); /* Reduced size */
+            position: relative;
+            line-height: 0.5;
+            margin: 0 0 0 1rem;
+        }
+
+        h1 span::before {
+            content: "Boring";
+            font-family: "WHOA Spine Minimum";
+            font-variation-settings: "hrzn" 0, "vert" 0, "rota" 0, "zoom" 0;
+            font-size: 1em;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            left: 0;
+        }
+
+        h1 span:hover,
+        h1 span:hover::before {
+            font-variation-settings: "hrzn" 820, "vert" -1000, "rota" 59, "zoom" 820;
+            transition: all 1000ms cubic-bezier(0.42, 0, 0.11, 1.43);
+        }
+
+        h1 span:hover {
+            -webkit-text-stroke: 1px white;
+        }
+
+        p {
+            max-width: 60ch;
+        }
+        .xx {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font: bold 1.5rem sans-serif;
+    text-transform: uppercase;
+    color: grey;
+    position: relative; /* Added for pseudo-element positioning */
+}
+
+.xx:hover {
+    color: #fff; /* Change text color on hover */
+}
+
+.xx:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0; /* 3px = thickness */
+    background: #ce4f20; /* Background color */
+    transform: scaleY(0); /* Use transform instead of scale */
+    transition: transform 0.3s ease, translate 0s .3s; /* Simplified transition */
+}
+
+.xx:hover:before {
+    transform: scaleY(1); /* Scale up on hover */
+    translate: 0; /* Reset translate on hover */
+}
+
+/* General hover effects for list items */
+.xx:hover li {
+    color: #fff; /* Change list item color on hover */
+}
+
+.xx:hover li:hover:before {
+    transform: translateY(100%); /* Move effect for hovered list item */
+    transition: transform 0.2s ease; /* Smooth transition for hovered item */
+}
+   .text-lg{
+      align-items: center;
+      align-content: center;
+      align-self: center;
+   }
+
+    </style>
+</head>
+<body class="live-wallpaper bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 p-4 flex justify-between items-center">
+        <div>
+            <h1 class="text-white text-3xl font-bold ">
+                <span>Ajitesh Dwivedi</span>
+            </h1>
+        </div>
+        <div>
+          <!-- Image in the top-right corner -->
+          <a href="https://ibb.co/QHML3Qq">
+              <img src="https://i.ibb.co/QHML3Qq/IMG-20210815-210248.jpg" alt="Ajitesh Dwivedi" class="profile-img">
+          </a>
+      </div>
+      
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-200 p-8 bg-opacity-50">
+        <div class="container mx-auto text-center xx">
+            <h2 class="text-4xl font-semibold mb-4">Member of IET</h2>
+            <!-- <p class="text-lg">Part of Technical team</p> -->
+        </div>
+    </section>
+
+<!-- About Me Section -->
+<section class="bg-blue-200 bg-opacity-50 flex items-center justify-center h-64"> <!-- Adjusted height -->
+  <div class="text-center">
+      <h3 class="text-3xl font-semibold mb-4">About Me</h3>
+      <p class="text-lg">
+        I am a B.Tech 2nd-year student specializing in Computer Science and Engineering (CSE). My passion lies in web development, where I enjoy creating dynamic and user-friendly applications. Additionally, I have a strong interest in competitive programming, which allows me to enhance my problem-solving skills and algorithmic thinking. I am eager to explore new technologies and apply my knowledge to real-world projects, aiming to contribute effectively to the tech community..</p>
+  </div>
+</section>
+
+    <!-- Achievements Section -->
+    <section class="py-12">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Achievement 1 - Modified -->
+                <div class="bg-white shadow-md rounded-lg p-6 bg-opacity-90 achievement-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++ Logo" class="w-16 h-16 mt-4">
+                    <h3 class="text-xl font-semibold mb-2">Passionate about Competitive Programming</h3>
+                    <p class="text-gray-700">Exploring algorithms, data structures, and problem-solving in C++.</p>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="bg-white shadow-md rounded-lg p-6 bg-opacity-90 achievement-card">
+                  <img src="https://t4.ftcdn.net/jpg/01/21/83/11/240_F_121831102_PQTMDLhAaX8Hq9aMasoH505g9lNYW5Xm.jpg" alt="Badminton Logo" class="w-16 h-16 mt-4">
+                  
+                    <h3 class="text-xl font-semibold mb-2">Hobbies - Guitar Enthusiast</h3>
+                    <p class="text-gray-700">I love playing the guitar and exploring different music styles in my free time.</p>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="bg-white shadow-md rounded-lg p-6 bg-opacity-90 achievement-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="Graduation Cap Icon" class="w-16 h-16 mt-4">
+                    <h3 class="text-xl font-semibold mb-2">Academic Achievements</h3>
+                    <p class="text-gray-700">12th Grade: 91.6%</p>
+                    <p class="text-gray-700">10th Grade: 96.6%</p>
+                </div>
+
+                <!-- Achievement - Badminton Sport with Logo -->
+                <div class="bg-white shadow-md rounded-lg p-6 bg-opacity-90 achievement-card">
+                    <h3 class="text-xl font-semibold mb-2">Badminton Sport</h3>
+                    <p class="text-gray-700">I actively participate in badminton and have played in several local tournaments.</p>
+                    <!-- Badminton Logo -->
+                    <img src="https://img.icons8.com/ios/452/badminton.png" alt="Badminton Logo" class="w-16 h-16 mt-4">
+                </div>
+
+                <!-- Achievement - Hobbies - Reading Books -->
+                <div class="bg-white shadow-md rounded-lg p-6 bg-opacity-90 achievement-card">
+                  <img src="https://www.shutterstock.com/image-vector/editable-flip-previous-page-vector-600nw-2282299607.jpg" alt="Badminton Logo" class="w-16 h-16 mt-4">
+                  <h3 class="text-xl font-semibold mb-2">Hobbies - Reading Books</h3>
+                  <p class="text-gray-700">I enjoy exploring various genres and authors, expanding my knowledge and imagination through literature.</p>
+              </div>
+              
+             <!-- Achievement 6 -->
+                <!-- Achievement - Solved 100+ Problems on LeetCode with Symbol -->
+                <div class="bg-white shadow-md rounded-lg p-6 bg-opacity-90 achievement-card">
+                  <h3 class="text-xl font-semibold mb-2">Solved 100+ Problems on LeetCode</h3>
+                  <p class="text-gray-700">Enhanced problem-solving skills through consistent practice and challenges.</p>
+                  <!-- LeetCode Logo -->
+                  <img src="https://imgs.search.brave.com/Lwf1m4g2zaAJxfSk32TCbx4JiOwKdtmUHX8SOHM5Jlc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yYXcu/Z2l0aHVidXNlcmNv/bnRlbnQuY29tL0xl/ZXRDb2RlLU9wZW5T/b3VyY2UvdnNjb2Rl/LWxlZXRjb2RlL21h/c3Rlci9yZXNvdXJj/ZXMvTGVldENvZGUu/cG5n" alt="LeetCode Logo" class="w-16 h-16 mt-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 p-4 text-center">
+        <p class="text-white">&copy; 2024 My Achievements | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
